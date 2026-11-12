@@ -12,7 +12,7 @@ jobs:
 
       - name: Fail if any non-markdown file exists
         run: |
-          bad=$(git ls-files | grep -v '\.md$' | grep -v '^\.github/workflows/' || true)
+          bad=$(git ls-files | grep -v '\.md$' | grep -v '^\.github/workflows/' | grep -vx '\.gitignore' || true)
           if [ -n "$bad" ]; then
             echo "❌ Only .md files are allowed. Found:"
             echo "$bad"

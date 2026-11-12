@@ -1,0 +1,12 @@
+# Markdown-only repo: ignore everything by default...
+*
+
+# ...but let git look inside folders
+!*/
+
+# Allow markdown files
+!*.md
+
+# Allow repo config files
+!.gitignore
+!.github/workflows/*.yml
